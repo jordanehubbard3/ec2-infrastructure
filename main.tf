@@ -1,7 +1,6 @@
 provider "aws" {
-  assume_role {
-    role_arn     = "arn:aws:iam::363546864948:role/my-tf-ec2-role"
-  }
+  region  = "us-east-1"
+  profile   = "myaws"
 }
 
 resource "aws_instance" "this" {
