@@ -1,6 +1,5 @@
 provider "aws" {
-  shared_config_files      = ["/root/.aws/config"]
-  shared_credentials_files = ["/root/.aws/credentials"]
+  region    = var.aws_region
 }
 
 resource "aws_instance" "this" {
