@@ -1,5 +1,7 @@
 provider "aws" {
-  region     = var.aws_region
+  assume_role {
+    role_arn     = "arn:aws:iam::363546864948:role/my-tf-ec2-role"
+  }
 }
 
 resource "aws_instance" "this" {
